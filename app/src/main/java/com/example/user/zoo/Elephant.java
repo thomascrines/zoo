@@ -16,7 +16,6 @@ public class Elephant extends Animal {
         this.age = age;
     }
 
-
     public String getName() {
         return this.name;
     }
