@@ -10,12 +10,12 @@ public class Population {
 
     private String name;
     private Habitat habitat;
-    private ArrayList<Animal> captives;
+    private ArrayList<Animal> population;
 
     public Population(String name, Habitat habitat) {
         this.name = name;
         this.habitat = habitat;
-        this.captives = new ArrayList<>();
+        this.population = new ArrayList<>();
     }
 
     public String getName() {
@@ -27,15 +27,15 @@ public class Population {
     }
 
     public ArrayList<Animal> getCaptives() {
-        return this.captives;
+        return this.population;
     }
 
     public void addAnimal(Animal animal) {
-        captives.add(animal);
+        population.add(animal);
     }
 
     public void removeAnimal(Animal animal) {
-        captives.remove(animal);
+        population.remove(animal);
     }
 
 }

@@ -14,12 +14,14 @@ public class PopulationTest {
         Population population1;
         Population population2;
         Elephant elephant;
+        Tiger tiger;
 
         @Before
         public void before() {
             population1 = new Population("Tropical Bird House", Habitat.BIRD_CAGE);
             population2 = new Population("Elephant Paddock", Habitat.GRASSLAND);
             elephant = new Elephant("Dumbo", 1);
+            tiger = new Tiger("Tony", 6);
         }
 
         @Test
@@ -41,8 +43,9 @@ public class PopulationTest {
     @Test
     public void testCanRemoveAnimals() {
         population2.addAnimal(elephant);
+        population2.addAnimal(tiger);
         population2.removeAnimal(elephant);
-        assertEquals(0, population2.getCaptives().size());
+        assertEquals(1, population2.getCaptives().size());
     }
     }
 
