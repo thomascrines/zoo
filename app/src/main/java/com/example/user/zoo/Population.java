@@ -6,13 +6,13 @@ import java.util.ArrayList;
  * Created by user on 12/11/2016.
  */
 
-public class Enclosure {
+public class Population {
 
     private String name;
     private Habitat habitat;
     private ArrayList<Animal> captives;
 
-    public Enclosure(String name, Habitat habitat) {
+    public Population(String name, Habitat habitat) {
         this.name = name;
         this.habitat = habitat;
         this.captives = new ArrayList<>();
@@ -32,6 +32,10 @@ public class Enclosure {
 
     public void addAnimal(Animal animal) {
         captives.add(animal);
+    }
+
+    public void removeAnimal(Animal animal) {
+        captives.remove(animal);
     }
 
 }
