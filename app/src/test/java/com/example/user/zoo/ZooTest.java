@@ -29,4 +29,19 @@ public class ZooTest {
     public void testCanGetZooName() {
         assertEquals("Edinburgh Zoo", zoo.getName());
     }
+
+    @Test
+    public void testCanAddEnclosures() {
+        zoo.addEnclosure(population1);
+        assertEquals(1, zoo.getEnclosures().size());
+    }
+
+    @Test
+    public void testCanRemoveRemoveEnclosures() {
+        zoo.addEnclosure(population1);
+        zoo.addEnclosure(population2);
+        zoo.removeEnclosure(population1);
+        assertEquals(1, zoo.getEnclosures().size());
+    }
 }
+

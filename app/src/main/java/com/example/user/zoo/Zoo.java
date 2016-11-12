@@ -9,13 +9,26 @@ import java.util.ArrayList;
 public class Zoo {
 
     private String name;
-    private ArrayList<Population> enclosure;
+    private ArrayList<Population> enclosures;
 
     public Zoo(String name) {
         this.name = name;
+        this.enclosures = new ArrayList<>();
     }
 
     public String getName() {
         return this.name;
+    }
+
+    public ArrayList<Population> getEnclosures() {
+        return this.enclosures;
+    }
+
+    public void addEnclosure(Population population) {
+        enclosures.add(population);
+    }
+
+    public void removeEnclosure(Population population) {
+        enclosures.remove(population);
     }
 }

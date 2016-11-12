@@ -26,7 +26,7 @@ public class Population {
         return this.habitat;
     }
 
-    public ArrayList<Animal> getCaptives() {
+    public ArrayList<Animal> getInhabitants() {
         return this.population;
     }
 
