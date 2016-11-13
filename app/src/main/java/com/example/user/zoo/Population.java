@@ -8,15 +8,15 @@ import java.util.ArrayList;
 
 public class Population {
 
-    private ArrayList<Animal> population;
+    public ArrayList<Animal> population;
 
     public Population() {
 
         this.population = new ArrayList<>();
     }
 
-    public ArrayList<Animal> getInhabitants() {
-        return this.population;
+    public ArrayList<Animal> getPopulation() {
+        return population;
     }
 
     public void addAnimal(Animal animal) {

@@ -25,7 +25,7 @@ public class PopulationTest {
     @Test
     public void testCanAddCaptives() {
         population.addAnimal(elephant);
-        assertEquals(1, population.getInhabitants().size());
+        assertEquals(1, population.getPopulation().size());
     }
 
     @Test
@@ -33,7 +33,7 @@ public class PopulationTest {
         population.addAnimal(elephant);
         population.addAnimal(tiger);
         population.removeAnimal(elephant);
-        assertEquals(1, population.getInhabitants().size());
+        assertEquals(1, population.getPopulation().size());
     }
     }
 

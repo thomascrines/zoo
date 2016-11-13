@@ -10,13 +10,11 @@ public class Enclosure {
     private String name;
     private Habitat habitat;
     private Population population;
-    private FeedingArea feedingArea;
 
-    public Enclosure(String name, Habitat habitat, Population population, FeedingArea feedingArea) {
+    public Enclosure(String name, Habitat habitat, Population population) {
         this.name = name;
         this.habitat = habitat;
         this.population = population;
-        this.feedingArea = feedingArea;
     }
 
     public String getName() {
@@ -31,7 +29,4 @@ public class Enclosure {
         return population;
     }
 
-    public FeedingArea getFeedingArea(){
-        return feedingArea;
-    }
 }
