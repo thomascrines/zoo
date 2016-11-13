@@ -25,7 +25,11 @@ public class FoodStorage {
         }
     }
 
-    public void removeFood(Food food, int quantity) {
+    public void removeFood(Food food) {
+        totalFood.remove(food);
+    }
+
+    public void removeMultipleFood(Food food, int quantity) {
         for (int i = 0; i < quantity; i++) {
             totalFood.remove(food);
         }

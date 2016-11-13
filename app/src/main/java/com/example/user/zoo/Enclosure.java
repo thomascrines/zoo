@@ -1,6 +1,8 @@
 package com.example.user.zoo;
 
 
+import java.util.ArrayList;
+
 /**
  * Created by user on 13/11/2016.
  */
@@ -28,5 +30,4 @@ public class Enclosure {
     public Population getPopulation() {
         return population;
     }
-
 }

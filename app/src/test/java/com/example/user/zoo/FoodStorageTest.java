@@ -30,11 +30,19 @@ public class FoodStorageTest {
     }
 
     @Test
+    public void testCanRemoveFood() {
+        foodStorage.addFood(peanuts, 3);
+        foodStorage.addFood(grains, 1);
+        foodStorage.removeFood(peanuts);
+        assertEquals(3, foodStorage.getTotalFood().size());
+    }
+
+    @Test
     public void canRemoveFood() {
         foodStorage.addFood(peanuts, 6);
         foodStorage.addFood(grains, 3);
-        foodStorage.removeFood(peanuts,2);
-        foodStorage.removeFood(grains,1);
+        foodStorage.removeMultipleFood(peanuts,2);
+        foodStorage.removeMultipleFood(grains,1);
         assertEquals(6, foodStorage.getTotalFood().size());
     }
 }

@@ -41,6 +41,6 @@ public class TicketTest {
 
     @Test
     public void testCanGetNumberOfVisitors() {
-        assertEquals(1, underThree.getNumberOfVisitors());
+        assertEquals(15, group.getNumberOfVisitors());
     }
 }
