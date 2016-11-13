@@ -29,6 +29,7 @@ public class FoodTest {
     public void testCanGetFoodType() {
         assertEquals(Diet.PEANUTS, peanuts.getFoodType());
     }
+
 }
 
 

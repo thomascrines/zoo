@@ -10,8 +10,16 @@ public class FeedingArea {
 
     private ArrayList<Food> feedingArea;
 
-    public FeedingArea(Food food) {
+    public FeedingArea() {
 
         this.feedingArea = new ArrayList<Food>();
+    }
+
+    public ArrayList<Food> getAllFoodInFeedingArea() {
+        return this.feedingArea;
+    }
+
+    public void addFood(Food food) {
+        feedingArea.add(food);
     }
 }
