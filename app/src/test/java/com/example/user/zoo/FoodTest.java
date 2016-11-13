@@ -16,8 +16,13 @@ public class FoodTest {
 
     @Before
     public void before() {
-        peanuts = new Food(0.55, Diet.PEANUTS);
-        grains = new Food(0.42, Diet.GRAINS);
+        peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
+        grains = new Food("Grains", 0.42, Diet.GRAINS);
+    }
+
+    @Test
+    public void testCanGetName() {
+        assertEquals("Peanuts", peanuts.getName());
     }
 
     @Test

@@ -17,8 +17,8 @@ public class FeedingAreaTest {
 
     @Before
     public void before() {
-        peanuts = new Food(0.55, Diet.PEANUTS);
-        grains = new Food(0.42, Diet.GRAINS);
+        peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
+        grains = new Food("Grains", 0.42, Diet.GRAINS);
         feedingArea = new FeedingArea();
     }
 
@@ -26,6 +26,13 @@ public class FeedingAreaTest {
     public void testCanGetAddFood() {
         feedingArea.addFood(grains);
         feedingArea.addFood(peanuts);
-        assertEquals(2, feedingArea.getAllFoodInFeedingArea().size());
+        assertEquals(2, feedingArea.getFeedingAreaContents().size());
+    }
+
+    @Test
+    public void testCanGetTotalCostofFeedingList() {
+        feedingArea.addFood(grains);
+        feedingArea.addFood(peanuts);
+        assertEquals(0.97, feedingArea.getTotalCostOfFeedingArea(), 0.1);
     }
 }
