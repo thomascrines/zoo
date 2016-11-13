@@ -19,8 +19,8 @@ public class ZooTest {
     @Before
     public void before() {
         zoo = new Zoo("Edinburgh Zoo");
-        population1 = new Population("Tropical Bird House", Habitat.BIRD_CAGE);
-        population2 = new Population("Elephant Paddock", Habitat.GRASSLAND);
+        population1 = new Population();
+        population2 = new Population();
         elephant = new Elephant("Dumbo", 1);
         tiger = new Tiger("Tony", 6);
     }

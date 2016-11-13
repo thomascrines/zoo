@@ -8,22 +8,11 @@ import java.util.ArrayList;
 
 public class Population {
 
-    private String name;
-    private Habitat habitat;
     private ArrayList<Animal> population;
 
-    public Population(String name, Habitat habitat) {
-        this.name = name;
-        this.habitat = habitat;
+    public Population() {
+
         this.population = new ArrayList<>();
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public Habitat getHabitat() {
-        return this.habitat;
     }
 
     public ArrayList<Animal> getInhabitants() {

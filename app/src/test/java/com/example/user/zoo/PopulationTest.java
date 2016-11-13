@@ -11,41 +11,29 @@ import static org.junit.Assert.assertEquals;
 
 public class PopulationTest {
 
-        Population population1;
-        Population population2;
+        Population population;
         Elephant elephant;
         Tiger tiger;
 
         @Before
         public void before() {
-            population1 = new Population("Tropical Bird House", Habitat.BIRD_CAGE);
-            population2 = new Population("Elephant Paddock", Habitat.GRASSLAND);
+            population = new Population();
             elephant = new Elephant("Dumbo", 1);
             tiger = new Tiger("Tony", 6);
         }
 
-        @Test
-        public void testCanGetEnclosureName() {
-            assertEquals("Tropical Bird House", population1.getName());
-        }
-
-        @Test
-        public void testCanGetHabitat() {
-            assertEquals(Habitat.BIRD_CAGE, population1.getHabitat());
-        }
-
     @Test
     public void testCanAddCaptives() {
-        population2.addAnimal(elephant);
-        assertEquals(1, population2.getInhabitants().size());
+        population.addAnimal(elephant);
+        assertEquals(1, population.getInhabitants().size());
     }
 
     @Test
     public void testCanRemoveAnimals() {
-        population2.addAnimal(elephant);
-        population2.addAnimal(tiger);
-        population2.removeAnimal(elephant);
-        assertEquals(1, population2.getInhabitants().size());
+        population.addAnimal(elephant);
+        population.addAnimal(tiger);
+        population.removeAnimal(elephant);
+        assertEquals(1, population.getInhabitants().size());
     }
     }
 
