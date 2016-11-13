@@ -11,6 +11,8 @@ import static org.junit.Assert.assertEquals;
 
 public class ZooTest {
     Zoo zoo;
+    Enclosure enclosure1;
+    Enclosure enclosure2;
     Population population1;
     Population population2;
     Elephant elephant;
@@ -18,9 +20,9 @@ public class ZooTest {
 
     @Before
     public void before() {
-        zoo = new Zoo("Edinburgh Zoo");
-        population1 = new Population();
-        population2 = new Population();
+        zoo = new Zoo("Edinburgh Zoo", 4000);
+        enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1);
+        enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2);
         elephant = new Elephant("Dumbo", 1);
         tiger = new Tiger("Tony", 6);
     }
@@ -32,15 +34,16 @@ public class ZooTest {
 
     @Test
     public void testCanAddEnclosures() {
-        zoo.addEnclosure(population1);
-        assertEquals(1, zoo.getEnclosures().size());
+        zoo.addEnclosure(enclosure1);
+        zoo.addEnclosure(enclosure2);
+        assertEquals(2, zoo.getEnclosures().size());
     }
 
     @Test
     public void testCanRemoveRemoveEnclosures() {
-        zoo.addEnclosure(population1);
-        zoo.addEnclosure(population2);
-        zoo.removeEnclosure(population1);
+        zoo.addEnclosure(enclosure1);
+        zoo.addEnclosure(enclosure2);
+        zoo.removeEnclosure(enclosure1);
         assertEquals(1, zoo.getEnclosures().size());
     }
 }

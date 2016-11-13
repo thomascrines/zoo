@@ -9,26 +9,32 @@ import java.util.ArrayList;
 public class Zoo {
 
     private String name;
-    private ArrayList<Population> enclosures;
+    private int capacity;
+    private ArrayList<Enclosure> enclosures;
 
-    public Zoo(String name) {
+    public Zoo(String name, int capacity) {
         this.name = name;
+        this.capacity = capacity;
         this.enclosures = new ArrayList<>();
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
-    public ArrayList<Population> getEnclosures() {
-        return this.enclosures;
+    public int getCapacity() {
+        return capacity;
     }
 
-    public void addEnclosure(Population population) {
-        enclosures.add(population);
+    public ArrayList<Enclosure> getEnclosures() {
+        return enclosures;
     }
 
-    public void removeEnclosure(Population population) {
-        enclosures.remove(population);
+    public void addEnclosure(Enclosure enclosure) {
+        enclosures.add(enclosure);
+    }
+
+    public void removeEnclosure(Enclosure enclosure) {
+        enclosures.remove(enclosure);
     }
 }
