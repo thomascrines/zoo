@@ -7,13 +7,14 @@ package com.example.user.zoo;
 public class Shark extends Animal {
 
     private String name;
+    private int newAge;
     private int age;
 
-    public Shark(String name, int age) {
-        super("Shark", Habitat.SALT_WATER, true, Diet.MEAT, 40000);
+    public Shark(String name, int newAge) {
+        super("Shark", 0, Habitat.SALT_WATER, true, Diet.MEAT, 40000);
 
         this.name = name;
-        this.age = age;
+        this.newAge = newAge;
     }
 
     public String getName() {
@@ -22,5 +23,9 @@ public class Shark extends Animal {
 
     public int getAge() {
         return this.age;
+    }
+
+    public void setAge() {
+        this.age = newAge;
     }
 }

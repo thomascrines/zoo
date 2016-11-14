@@ -81,10 +81,10 @@ public class Zoo {
         }
     }
 
-    public void sellElephant(Elephant elephant, Enclosure enclosure) {
-        if (elephant.getAge() < 1) {
-            funds += elephant.getValue();
-            enclosure.getPopulation().returnPopulation().remove(elephant);
+    public void sellAnimal(Animal animal, Enclosure enclosure) {
+        if (animal.getAge() <= 1) {
+            funds += animal.getValue();
+            enclosure.getPopulation().returnPopulation().remove(animal);
         }
     }
 

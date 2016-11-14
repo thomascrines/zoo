@@ -40,7 +40,9 @@ public class ZooTest {
         enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1);
         enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2);
         elephant = new Elephant("Dumbo", 0);
+        elephant.setAge();
         tiger = new Tiger("Tony", 6);
+        tiger.setAge();
         foodStorage = new FoodStorage();
         peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
         meat = new Food("Meat", 2.35, Diet.MEAT);
@@ -119,7 +121,7 @@ public class ZooTest {
         zoo.sellTickets(underThree, 2);
         zoo.sellTickets(family, 2);
         zoo.sellTickets(group, 2);
-        assertEquals(615, zoo.getFunds(), 0.1);
+        assertEquals(500615, zoo.getFunds(), 0.1);
         assertEquals(3954, zoo.getCapacity());
     }
 
@@ -127,9 +129,18 @@ public class ZooTest {
     public void testCanSellBabyElephant() {
         zoo.addEnclosure(enclosure1);
         enclosure1.getPopulation().addAnimal(elephant);
-        zoo.sellElephant(elephant, enclosure1);
+        zoo.sellAnimal(elephant, enclosure1);
         assertEquals(0, enclosure1.getPopulation().returnPopulation().size());
-        assertEquals(60000, zoo.getFunds(), 0.1);
+        assertEquals(550000, zoo.getFunds(), 0.1);
+    }
+
+    @Test
+    public void testCantSellAdultTiger() {
+        zoo.addEnclosure(enclosure2);
+        enclosure2.getPopulation().addAnimal(tiger);
+        zoo.sellAnimal(tiger, enclosure2);
+        assertEquals(1, enclosure2.getPopulation().returnPopulation().size());
+        assertEquals(500000, zoo.getFunds(), 0.1);
     }
 
     @Test

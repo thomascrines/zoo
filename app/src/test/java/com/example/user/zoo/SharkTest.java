@@ -25,6 +25,12 @@ public class SharkTest {
 
     @Test
     public void testCanGetAge() {
+        assertEquals(0, shark.getAge());
+    }
+
+    @Test
+    public void testCanSetAge() {
+        shark.setAge();
         assertEquals(6, shark.getAge());
     }
 
@@ -52,5 +58,7 @@ public class SharkTest {
     public void testCanGetValue() {
         assertEquals(40000, shark.getValue(), 0.1);
     }
+
+
 }
 
