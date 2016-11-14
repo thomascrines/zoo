@@ -12,11 +12,13 @@ public class Enclosure {
     private String name;
     private Habitat habitat;
     private Population population;
+    private ArrayList<Diet> necessaryDiet;
 
     public Enclosure(String name, Habitat habitat, Population population) {
         this.name = name;
         this.habitat = habitat;
         this.population = population;
+        this.necessaryDiet = new ArrayList<>();
     }
 
     public String getName() {
@@ -29,5 +31,16 @@ public class Enclosure {
 
     public Population getPopulation() {
         return population;
+    }
+
+    public ArrayList<Diet> getNecessaryDiet() {
+        return this.necessaryDiet;
+    }
+
+    public Diet addNecessaryDiet() {
+        for (Animal animal : population.getPopulation()) {
+            necessaryDiet.add(animal.getDiet());
+        }
+        return null;
     }
 }

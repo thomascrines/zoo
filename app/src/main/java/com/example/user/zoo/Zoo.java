@@ -11,6 +11,7 @@ public class Zoo {
     private String name;
     private int capacity;
     private ArrayList<Enclosure> enclosures;
+    private ArrayList<Diet> zooDailyDiet;
     private FoodStorage foodStorage;
     private double funds;
 
@@ -18,6 +19,7 @@ public class Zoo {
         this.name = name;
         this.capacity = capacity;
         this.enclosures = new ArrayList<>();
+        this.zooDailyDiet = new ArrayList<>();
         this.funds = funds;
     }
 
@@ -45,15 +47,23 @@ public class Zoo {
         enclosures.remove(enclosure);
     }
 
-//    public void feedAnimals() {
-//        for (Enclosure enclosure : enclosures) {
-//            for (Animal animal : enclosure.Population) {
-//                for (Food food : foodStorage)
-//                if (food.getFoodType() == animal.getDiet()) {
-//                    foodStorage.removeFood(food);
-//                }
+    public void addNecessaryFoodForDay() {
+        for (Enclosure enclosure : enclosures) {
+            enclosure.addNecessaryDiet();
+            for (Diet foodType : enclosure.getNecessaryDiet())
+            zooDailyDiet.add(foodType);
+        }
+    }
+
+    public ArrayList<Diet> getNecessaryFoodForDay() {
+        return this.zooDailyDiet;
+    }
+
+//    public void removeNecessaryFoodFromFoodStorage() {
+//        for (Food food : foodStorage)
+//            if (food.getFoodType() == animal.getDiet()) {
+//                foodStorage.removeFood(food);
 //            }
-//        }
 //    }
 
     public void sellTickets (Ticket ticket, int quantity) {

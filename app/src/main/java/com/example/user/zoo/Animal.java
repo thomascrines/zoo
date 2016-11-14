@@ -4,7 +4,7 @@ package com.example.user.zoo;
  * Created by user on 12/11/2016.
  */
 
-public class Animal {
+abstract class Animal {
 
     private String species;
     private Habitat habitat;
