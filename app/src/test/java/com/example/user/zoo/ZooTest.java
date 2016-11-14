@@ -3,6 +3,8 @@ package com.example.user.zoo;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -26,14 +28,17 @@ public class ZooTest {
     Ticket underThree;
     Ticket family;
     Ticket group;
+    ArrayList<Diet> test_array;
+    Diet diet1;
+    Diet diet2;
 
     @Before
     public void before() {
         zoo = new Zoo("Edinburgh Zoo", 4000, 0);
-        enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1);
-        enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2);
         population1 = new Population();
         population2 = new Population();
+        enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1);
+        enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2);
         elephant = new Elephant("Dumbo", 1);
         tiger = new Tiger("Tony", 6);
         foodStorage = new FoodStorage();
@@ -45,6 +50,11 @@ public class ZooTest {
         underThree = new Ticket(TicketType.CHILD_UNDER_3, 0.00, 1);
         family = new Ticket(TicketType.FAMILY, 53.50, 4);
         group = new Ticket(TicketType.GROUP, 210.00, 15);
+        test_array = new ArrayList<>();
+        diet1 = Diet.PEANUTS;
+        diet2 = Diet.MEAT;
+        test_array.add(diet1);
+        test_array.add(diet2);
     }
 
     @Test
@@ -81,7 +91,7 @@ public class ZooTest {
         Population enc2Population = enclosure2.getPopulation();
         enc2Population.addAnimal(tiger);
         zoo.addNecessaryFoodForDay();
-        assertEquals(Diet.PEANUTS, zoo.getNecessaryFoodForDay());
+        assertEquals(test_array, zoo.getNecessaryFoodForDay());
     }
 
     @Test
