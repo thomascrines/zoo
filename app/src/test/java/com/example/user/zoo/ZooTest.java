@@ -34,12 +34,12 @@ public class ZooTest {
 
     @Before
     public void before() {
-        zoo = new Zoo("Edinburgh Zoo", 4000, 0);
+        zoo = new Zoo("Edinburgh Zoo", 4000, 500000);
         population1 = new Population();
         population2 = new Population();
         enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1);
         enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2);
-        elephant = new Elephant("Dumbo", 1);
+        elephant = new Elephant("Dumbo", 0);
         tiger = new Tiger("Tony", 6);
         foodStorage = new FoodStorage();
         peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
@@ -86,13 +86,30 @@ public class ZooTest {
     public void testCanAddNecessaryFoodForDay() {
         zoo.addEnclosure(enclosure1);
         zoo.addEnclosure(enclosure2);
-        Population enc1Population = enclosure1.getPopulation();
-        enc1Population.addAnimal(elephant);
-        Population enc2Population = enclosure2.getPopulation();
-        enc2Population.addAnimal(tiger);
+        enclosure1.getPopulation().addAnimal(elephant);
+        enclosure2.getPopulation().addAnimal(tiger);
         zoo.addNecessaryFoodForDay();
         assertEquals(test_array, zoo.getNecessaryFoodForDay());
     }
+
+//    @Test
+//    public void testCanRemoveDailyFoodFromStore() {
+//        FoodStorage testFoodStore= new FoodStorage();
+//        testFoodStore.addFood(peanuts, 3);
+//        testFoodStore.addFood(meat, 3);
+//
+//        foodStorage.addFood(peanuts, 4);
+//        foodStorage.addFood(meat, 4);
+//        zoo.addEnclosure(enclosure1);
+//        zoo.addEnclosure(enclosure2);
+//        enclosure1.getPopulation().addAnimal(elephant);
+//        enclosure2.getPopulation().addAnimal(tiger);
+//        zoo.addNecessaryFoodForDay();
+//        zoo.removeNecessaryFoodFromFoodStorage();
+//
+////        assertEquals(testFoodStore.getTotalFood(), foodStorage.getTotalFood());
+////        assertEquals(9997.10, zoo.getFunds(), 0.1);
+//    }
 
     @Test
     public void testCanSellTickets() {
@@ -104,5 +121,22 @@ public class ZooTest {
         zoo.sellTickets(group, 2);
         assertEquals(615, zoo.getFunds(), 0.1);
         assertEquals(3954, zoo.getCapacity());
+    }
+
+    @Test
+    public void testCanSellBabyElephant() {
+        zoo.addEnclosure(enclosure1);
+        enclosure1.getPopulation().addAnimal(elephant);
+        zoo.sellElephant(elephant, enclosure1);
+        assertEquals(0, enclosure1.getPopulation().returnPopulation().size());
+        assertEquals(60000, zoo.getFunds(), 0.1);
+    }
+
+    @Test
+    public void testAnimalCanEscape() {
+        zoo.addEnclosure(enclosure1);
+        enclosure1.getPopulation().addAnimal(tiger);
+        zoo.animalEscape(tiger, enclosure1);
+        assertEquals(350000, zoo.getFunds(), 0.1);
     }
 }

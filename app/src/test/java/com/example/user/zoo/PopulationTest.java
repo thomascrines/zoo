@@ -22,18 +22,19 @@ public class PopulationTest {
             tiger = new Tiger("Tony", 6);
         }
 
-    @Test
-    public void testCanAddCaptives() {
-        population.addAnimal(elephant);
-        assertEquals(1, population.getPopulation().size());
-    }
+//    @Test
+//    public void testCanAddAnimals() {
+//        population.addAnimal(elephant);
+//        assertEquals(1, population.returnPopulation().size());
+//    }
 
     @Test
     public void testCanRemoveAnimals() {
         population.addAnimal(elephant);
+        population.addAnimal(elephant);
         population.addAnimal(tiger);
         population.removeAnimal(elephant);
-        assertEquals(1, population.getPopulation().size());
+        assertEquals(1, population.returnPopulation().size());
     }
     }
 

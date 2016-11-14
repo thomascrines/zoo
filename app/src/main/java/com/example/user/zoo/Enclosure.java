@@ -33,14 +33,21 @@ public class Enclosure {
         return population;
     }
 
+    public void addAnimalToEnclosure(Animal animal) {
+        if (animal.getHabitat() == habitat) {
+            this.getPopulation().addAnimal(animal);
+        }
+    }
+
     public ArrayList<Diet> getNecessaryDiet() {
         return this.necessaryDiet;
     }
 
     public Diet addNecessaryDiet() {
-        for (Animal animal : population.getPopulation()) {
+        for (Animal animal : population.returnPopulation()) {
             necessaryDiet.add(animal.getDiet());
         }
         return null;
     }
+
 }

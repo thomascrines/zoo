@@ -47,4 +47,9 @@ public class ElephantTest {
     public void canGetDiet() {
         assertEquals(Diet.PEANUTS, elephant.getDiet());
     }
+
+    @Test
+    public void testCanGetValue() {
+        assertEquals(50000, elephant.getValue(), 0.1);
+    }
 }

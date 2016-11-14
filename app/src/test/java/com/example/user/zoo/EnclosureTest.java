@@ -20,17 +20,19 @@ public class EnclosureTest {
     Diet diet2;
     Elephant elephant;
     Tiger tiger;
+    Shark shark;
     ArrayList<Diet> test_array;
 
     @Before
     public void before() {
         elephant = new Elephant("Dumbo", 1);
         tiger = new Tiger("Shere Khan", 7);
+        shark = new Shark("Jaws", 6);
         peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
         diet1 = Diet.PEANUTS;
         diet2 = Diet.MEAT;
         population = new Population();
-        enclosure = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population);
+        enclosure = new Enclosure("Elephant Enclosure", Habitat.DESERT, population);
         test_array = new ArrayList<>();
         test_array.add(diet1);
         test_array.add(diet2);
@@ -43,12 +45,19 @@ public class EnclosureTest {
 
     @Test
     public void testCanGetHabitatType() {
-        assertEquals(Habitat.GRASSLAND, enclosure.getHabitat());
+        assertEquals(Habitat.DESERT, enclosure.getHabitat());
     }
 
     @Test
     public void testCanGetPopulation() {
         assertEquals(population, enclosure.getPopulation());
+    }
+
+    @Test
+    public void testCanAddAnimalToEnclosure() {
+        enclosure.addAnimalToEnclosure(elephant);
+        enclosure.addAnimalToEnclosure(shark);
+        assertEquals(1, enclosure.getPopulation().returnPopulation().size());
     }
 
     @Test

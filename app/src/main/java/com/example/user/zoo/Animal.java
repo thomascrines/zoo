@@ -10,12 +10,15 @@ abstract class Animal {
     private Habitat habitat;
     private boolean carnivore;
     private Diet diet;
+    private double value;
 
-    public Animal(String species, Habitat habitat, boolean carnivore, Diet diet) {
+
+    public Animal(String species, Habitat habitat, boolean carnivore, Diet diet, double value) {
         this.species = species;
         this.habitat = habitat;
         this.carnivore = carnivore;
         this.diet = diet;
+        this.value = value;
     }
 
     public String getSpecies() {
@@ -32,6 +35,10 @@ abstract class Animal {
 
     public Diet getDiet() {
         return this.diet;
+    }
+
+    public double getValue() {
+        return this.value;
     }
 
 }

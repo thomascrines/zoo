@@ -15,12 +15,17 @@ public class Population {
         this.population = new ArrayList<>();
     }
 
-    public ArrayList<Animal> getPopulation() {
+    public ArrayList<Animal> returnPopulation() {
         return population;
     }
 
     public void addAnimal(Animal animal) {
-        population.add(animal);
+        for (Animal residentAnimal : population) {
+            if (animal.isCarnivorous() && population.contains(residentAnimal.isCarnivorous())) ;
+            population.add(animal);
+            if (!animal.isCarnivorous() && population.contains(!residentAnimal.isCarnivorous()));
+            population.add(animal);
+        }
     }
 
     public void removeAnimal(Animal animal) {

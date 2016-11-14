@@ -6,50 +6,51 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by user on 12/11/2016.
+ * Created by user on 14/11/2016.
  */
 
-public class TigerTest {
+public class SharkTest {
 
-    Tiger tiger;
+    Shark shark;
 
     @Before
     public void before(){
-        tiger = new Tiger("Tony", 6);
+        shark = new Shark("Jaws", 6);
     }
 
     @Test
     public void testCanGetName(){
-        assertEquals("Tony", tiger.getName());
+        assertEquals("Jaws", shark.getName());
     }
 
     @Test
     public void testCanGetAge() {
-        assertEquals(6, tiger.getAge());
+        assertEquals(6, shark.getAge());
     }
 
     @Test
     public void testCanGetSpecies() {
-        assertEquals("Tiger", tiger.getSpecies());
+        assertEquals("Shark", shark.getSpecies());
     }
 
     @Test
     public void testCanGetHabitat(){
-        assertEquals(Habitat.GRASSLAND, tiger.getHabitat());
+        assertEquals(Habitat.SALT_WATER, shark.getHabitat());
     }
 
     @Test
     public void animalCanBeCarnivorous() {
-        assertEquals(true, tiger.isCarnivorous());
+        assertEquals(true, shark.isCarnivorous());
     }
 
     @Test
     public void canGetDiet() {
-        assertEquals(Diet.MEAT, tiger.getDiet());
+        assertEquals(Diet.MEAT, shark.getDiet());
     }
 
     @Test
     public void testCanGetValue() {
-        assertEquals(75000, tiger.getValue(), 0.1);
+        assertEquals(40000, shark.getValue(), 0.1);
     }
 }
+

@@ -34,6 +34,4 @@ public class FoodStorage {
             totalFood.remove(food);
         }
     }
-
 }
-

@@ -1,16 +1,16 @@
 package com.example.user.zoo;
 
 /**
- * Created by user on 12/11/2016.
+ * Created by user on 14/11/2016.
  */
 
-public class Elephant extends Animal {
+public class Shark extends Animal {
 
     private String name;
     private int age;
 
-    public Elephant(String name, int age) {
-        super("Elephant", Habitat.DESERT, false, Diet.PEANUTS, 50000);
+    public Shark(String name, int age) {
+        super("Shark", Habitat.SALT_WATER, true, Diet.MEAT, 40000);
 
         this.name = name;
         this.age = age;
@@ -23,7 +23,4 @@ public class Elephant extends Animal {
     public int getAge() {
         return this.age;
     }
-
-
 }
-

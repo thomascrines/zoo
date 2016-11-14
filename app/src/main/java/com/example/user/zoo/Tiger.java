@@ -10,7 +10,7 @@ public class Tiger extends Animal {
         private int age;
 
         public Tiger(String name, int age) {
-            super("Tiger", Habitat.GRASSLAND, true, Diet.MEAT);
+            super("Tiger", Habitat.GRASSLAND, true, Diet.MEAT, 75000);
 
             this.name = name;
             this.age = age;

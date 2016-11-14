@@ -20,6 +20,7 @@ public class Zoo {
         this.capacity = capacity;
         this.enclosures = new ArrayList<>();
         this.zooDailyDiet = new ArrayList<>();
+        this.foodStorage = new FoodStorage();
         this.funds = funds;
     }
 
@@ -50,8 +51,9 @@ public class Zoo {
     public void addNecessaryFoodForDay() {
         for (Enclosure enclosure : enclosures) {
             enclosure.addNecessaryDiet();
-            for (Diet foodType : enclosure.getNecessaryDiet())
-            zooDailyDiet.add(foodType);
+            for (Diet foodType : enclosure.getNecessaryDiet()) {
+                zooDailyDiet.add(foodType);
+            }
         }
     }
 
@@ -60,10 +62,14 @@ public class Zoo {
     }
 
 //    public void removeNecessaryFoodFromFoodStorage() {
-//        for (Food food : foodStorage)
-//            if (food.getFoodType() == animal.getDiet()) {
-//                foodStorage.removeFood(food);
+//        for (Diet dietType : zooDailyDiet) {
+//            for (Food storageFood : foodStorage.getTotalFood()) {
+//                if (storageFood.getFoodType() == dietType) {
+//                    foodStorage.removeFood(storageFood);
+//                    this.funds -= storageFood.getCost();
+//                }
 //            }
+//        }
 //    }
 
     public void sellTickets (Ticket ticket, int quantity) {
@@ -73,5 +79,17 @@ public class Zoo {
         for (int i = 0; i < quantity; i++) {
             capacity -= ticket.getNumberOfVisitors();
         }
+    }
+
+    public void sellElephant(Elephant elephant, Enclosure enclosure) {
+        if (elephant.getAge() < 1) {
+            funds += elephant.getValue();
+            enclosure.getPopulation().returnPopulation().remove(elephant);
+        }
+    }
+
+    public void animalEscape(Animal animal, Enclosure enclosure) {
+        enclosure.getPopulation().returnPopulation().remove(animal);
+        funds -= animal.getValue() * 2;
     }
 }
