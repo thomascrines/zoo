@@ -82,54 +82,6 @@ public class Zoo {
     }
 
 
-//    public void removeEnclosureFoodFromStore() {
-//        Iterator<Food> foodIterator = foodStorage.getTotalFood().iterator();
-//        ArrayList<Diet> necessaryDiet = new ArrayList<>();
-//        for (Food food : getNecessaryFoodForDay()) {
-//            necessaryDiet.add(food);
-//            for (Food food : foodStorage.getTotalFood()) {
-//                while (foodIterator.hasNext()) {
-//                    food = foodIterator.next();
-//                    if (diet == food.getFoodType()) {
-//                        foodStorage.removeFood(food);
-//                    }
-//                }
-//            }
-//        }
-//    }
-
-//    public void removeNecessaryFoodFromFoodStorage() {
-//        Iterator<Diet> dietIterator = zooDailyDiet.iterator();
-//        Iterator<Food> foodIterator = foodStorage.getTotalFood().iterator();
-////
-////
-//        for (Diet dietType : zooDailyDiet) {
-//            while (dietIterator.hasNext()) {
-//                dietIterator.next();
-//                for (Food storageFood : foodStorage.getTotalFood())
-//                    while (foodIterator.hasNext()) {
-//                        Food food = foodIterator.next();
-//                        if (dietType == storageFood.getFoodType()) {
-//                            foodStorage.getTotalFood().remove(storageFood);
-//                        }
-//                    }
-//            }
-//        }
-//    }
-//
-//    public void removeNecFood2() {
-//        ArrayList toRemove = new ArrayList();
-//
-//        for (Diet dietType : zooDailyDiet) {
-//                for (Food storageFood : foodStorage.getTotalFood())
-//                    if (dietType == storageFood.getFoodType()) {
-//                        toRemove.add(storageFood);
-//                        this.funds -= storageFood.getCost();
-//                    }
-//        }
-//        foodStorage.getTotalFood().removeAll(toRemove);
-//    }
-
     public void sellTickets (Ticket ticket, int quantity) {
         for (int i = 0; i < quantity; i++) {
             funds += ticket.getPrice();
