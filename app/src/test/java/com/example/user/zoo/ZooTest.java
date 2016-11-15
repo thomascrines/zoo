@@ -155,4 +155,13 @@ public class ZooTest {
         assertEquals(350000, zoo.getFunds(), 0.1);
     }
 
+
+    @Test
+    public void testCanReturnFoodAsString() {
+        zoo.getFoodStorage().addFood(meat, 1);
+        zoo.getFoodStorage().addFood(peanuts, 2);
+
+        assertEquals("Peanuts: 2 \nMeat: 1\nGrains: 0\nBird Feed: 0", zoo.viewStockAsString());
+    }
+
 }

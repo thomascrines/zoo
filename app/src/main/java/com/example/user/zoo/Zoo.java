@@ -33,8 +33,16 @@ public class Zoo {
         return capacity;
     }
 
+    public String getCapacityToString() {
+        return Integer.toString(capacity);
+    }
+
     public double getFunds() {
         return funds;
+    }
+
+    public String getFundsToString() {
+        return Double.toString(funds);
     }
 
     public ArrayList<Enclosure> getEnclosures() {
@@ -63,12 +71,12 @@ public class Zoo {
     }
 
     public void removeFoodFromStore() {
-        for (Diet diet :zooDailyDiet) {
+        for (Diet diet : zooDailyDiet) {
             Food food = foodStorage.findFoodByType(diet);
-                    foodStorage.removeFood(food);
+            foodStorage.removeFood(food);
 
-            }
         }
+    }
 
     public void buyFood(Food food, int quantity) {
         foodStorage.addFood(food, quantity);
@@ -82,7 +90,7 @@ public class Zoo {
     }
 
 
-    public void sellTickets (Ticket ticket, int quantity) {
+    public void sellTickets(Ticket ticket, int quantity) {
         for (int i = 0; i < quantity; i++) {
             funds += ticket.getPrice();
         }
@@ -101,5 +109,29 @@ public class Zoo {
     public void animalEscape(Animal animal, Enclosure enclosure) {
         enclosure.getPopulation().returnPopulation().remove(animal);
         funds -= animal.getValue() * 2;
+    }
+
+    public String viewStockAsString() {
+        int peanutsCounter = 0;
+        int meatCounter = 0;
+        int grainsCounter = 0;
+        int birdFeedCounter = 0;
+
+        for (Food food : foodStorage.getTotalFood()) {
+            if (food.getFoodType() == Diet.PEANUTS) {
+                peanutsCounter += 1;
+            }
+            if (food.getFoodType() == Diet.MEAT) {
+                meatCounter += 1;
+            }
+            if (food.getFoodType() == Diet.GRAINS) {
+                grainsCounter += 1;
+            }
+            if (food.getFoodType() == Diet.BIRD_FEED) {
+                birdFeedCounter += 1;
+
+            }
+        }
+        return "Peanuts: " + Integer.toString(peanutsCounter) + "\n" + "Meat: " + Integer.toString(meatCounter) + "\n" + "Grains: " + Integer.toString(grainsCounter) + "\n" + "Bird Feed: " + Integer.toString(birdFeedCounter);
     }
 }

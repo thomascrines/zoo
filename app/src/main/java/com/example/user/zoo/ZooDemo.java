@@ -32,6 +32,7 @@ public class ZooDemo {
     FoodStorage foodStorage;
     Peanuts peanuts;
     Meat meat;
+    Grains grains;
     BirdFeed birdFeed;
     Ticket standard;
     Ticket concession;
@@ -61,7 +62,12 @@ public class ZooDemo {
         foodStorage = new FoodStorage();
         peanuts = new Peanuts();
         meat = new Meat();
+        grains = new Grains();
         birdFeed = new BirdFeed();
+        this.foodStorage.addFood(peanuts, 134);
+        this.foodStorage.addFood(meat, 120);
+        this.foodStorage.addFood(birdFeed, 22);
+        this.foodStorage.addFood(grains, 31);
         standard = new Ticket(TicketType.STANDARD, 17.00, 1);
         concession = new Ticket(TicketType.CONCESSION, 14.50, 1);
         threeToFifteen = new Ticket(TicketType.CHILD_3_TO_15, 12.50, 1);

@@ -7,6 +7,39 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".EnclosureActivity"
+            android:label="@string/enclosures_text"
+            android:parentActivityName=".EnclosureActivity">
+        </activity>
+
+        <activity android:name=".FoodStockActivity"
+            android:label="@string/food_stock_text"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity android:name=".BuyFoodActivity"
+            android:label="@string/buy_food_text"
+            android:parentActivityName=".BuyFoodActivity">
+        </activity>
+
+        <activity android:name=".FeedAnimalsActivity"
+            android:label="@string/feed_animals_text"
+            android:parentActivityName=".FeedAnimalsActivity">
+        </activity>
+
+        <activity android:name=".SellTicketsActivity"
+            android:label="@string/sell_tickets_text"
+            android:parentActivityName=".SellTicketsActivity">
+        </activity>
 
     </application>
 

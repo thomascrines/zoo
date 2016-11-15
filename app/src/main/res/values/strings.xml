@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Zoo</string>
+    <string name="name">Name: </string>
+    <string name="tickets_available">Tickets Available: </string>
+    <string name="funds_available">Funds Available: </string>
+    <string name="enclosures_text">View Enclosures</string>
+    <string name="food_stock_text">Check Food Stock</string>
+    <string name="buy_food_text">Buy Food</string>
+    <string name="feed_animals_text">Feed Animals</string>
+    <string name="sell_tickets_text">Sell Tickets</string>
 </resources>

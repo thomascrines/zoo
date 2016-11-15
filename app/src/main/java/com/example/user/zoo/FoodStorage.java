@@ -26,7 +26,7 @@ public class FoodStorage {
     }
 
     public Food findFoodByType(Diet foodtype) {
-        for (Food food: totalFood) {
+        for (Food food : totalFood) {
             if (food.getFoodType() == foodtype) {
                 return food;
             }
@@ -43,4 +43,5 @@ public class FoodStorage {
             totalFood.remove(food);
         }
     }
+
 }
