@@ -59,6 +59,10 @@ public class Enclosure {
         return null;
     }
 
+    public String viewDetailsAsString() {
+        return " Enclosure name: " + name.toString() + ", Habitat type: " + habitat.toString() + ", Population: " + Integer.toString(population.returnPopulation().size());
+    }
+
 
 
 }

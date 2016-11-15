@@ -8,4 +8,12 @@
     <string name="buy_food_text">Buy Food</string>
     <string name="feed_animals_text">Feed Animals</string>
     <string name="sell_tickets_text">Sell Tickets</string>
+    <string name="elephant_enclosure">Elephant Enclosure</string>
+    <string name="tiger_enclosure">Tiger Enclosure</string>
+    <string name="shark_tank">Shark Tank</string>
+    <string name="parrot_cage">Parrot Cage</string>
+    <string name="elephant_enclosure_inhabitants">Elephant Enclosure Inhabitants</string>
+    <string name="tiger_enclosure_inhabitants">Tiger Enclosure Inhabitants</string>
+    <string name="shark_tank_inhabitants">Shark Tank Inhabitants</string>
+    <string name="parrot_cage_inhabitants">Parrot Cage Inhabitants</string>
 </resources>
