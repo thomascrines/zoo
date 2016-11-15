@@ -40,9 +40,7 @@ public class ZooTest {
         enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1);
         enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2);
         elephant = new Elephant("Dumbo", 0);
-        elephant.setAge();
         tiger = new Tiger("Tony", 6);
-        tiger.setAge();
         foodStorage = new FoodStorage();
         peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
         meat = new Food("Meat", 2.35, Diet.MEAT);

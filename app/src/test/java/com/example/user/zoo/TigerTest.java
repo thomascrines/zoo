@@ -25,12 +25,6 @@ public class TigerTest {
 
     @Test
     public void testCanGetAge() {
-        assertEquals(0, tiger.getAge());
-    }
-
-    @Test
-    public void testCanSetAge() {
-        tiger.setAge();
         assertEquals(6, tiger.getAge());
     }
 

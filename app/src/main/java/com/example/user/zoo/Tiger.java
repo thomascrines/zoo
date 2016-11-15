@@ -6,27 +6,9 @@ package com.example.user.zoo;
 
 public class Tiger extends Animal {
 
-        private String name;
-        private int newAge;
-        private int age;
+        public Tiger(String name, int age) {
+            super(name, age, "Tiger", Habitat.GRASSLAND, true, Diet.MEAT, 75000);
 
-        public Tiger(String name, int newAge) {
-            super("Tiger", 0, Habitat.GRASSLAND, true, Diet.MEAT, 75000);
-
-            this.name = name;
-            this.newAge = newAge;
-        }
-
-        public String getName() {
-            return this.name;
-        }
-
-        public int getAge() {
-            return this.age;
-        }
-
-        public void setAge() {
-            this.age = newAge;
         }
     }
 

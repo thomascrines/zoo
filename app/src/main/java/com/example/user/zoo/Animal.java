@@ -6,6 +6,7 @@ package com.example.user.zoo;
 
 abstract class Animal {
 
+    private String name;
     private String species;
     private int age;
     private Habitat habitat;
@@ -14,13 +15,19 @@ abstract class Animal {
     private double value;
 
 
-    public Animal(String species, int age, Habitat habitat, boolean carnivore, Diet diet, double value) {
+    public Animal(String name, int age, String species, Habitat habitat, boolean carnivore, Diet diet, double value) {
+        this.name = name;
+        this.age = age;
         this.species = species;
         this.habitat = habitat;
         this.carnivore = carnivore;
         this.diet = diet;
         this.value = value;
         this.age = age;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public String getSpecies() {

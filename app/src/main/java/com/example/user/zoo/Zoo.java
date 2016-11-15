@@ -57,10 +57,10 @@ public class Zoo {
         }
     }
 
-    public ArrayList<Diet> getNecessaryFoodForDay() {
-        return this.zooDailyDiet;
-    }
-
+//    public ArrayList<Diet> getNecessaryFoodForDay() {
+//        return this.zooDailyDiet;
+//    }
+//
 //    public void removeNecessaryFoodFromFoodStorage() {
 //        for (Diet dietType : zooDailyDiet) {
 //            for (Food storageFood : foodStorage.getTotalFood()) {

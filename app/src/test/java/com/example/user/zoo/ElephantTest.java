@@ -25,12 +25,6 @@ public class ElephantTest {
 
          @Test
         public void testCanGetAge() {
-            assertEquals(0, elephant.getAge());
-        }
-
-        @Test
-        public void testCanSetAge() {
-            elephant.setAge();
             assertEquals(1, elephant.getAge());
         }
 

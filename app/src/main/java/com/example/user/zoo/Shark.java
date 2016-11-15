@@ -6,26 +6,10 @@ package com.example.user.zoo;
 
 public class Shark extends Animal {
 
-    private String name;
-    private int newAge;
-    private int age;
 
-    public Shark(String name, int newAge) {
-        super("Shark", 0, Habitat.SALT_WATER, true, Diet.MEAT, 40000);
-
-        this.name = name;
-        this.newAge = newAge;
+    public Shark(String name, int age) {
+        super(name, age, "Shark", Habitat.SALT_WATER, true, Diet.MEAT, 40000);
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public int getAge() {
-        return this.age;
-    }
-
-    public void setAge() {
-        this.age = newAge;
-    }
 }
+
