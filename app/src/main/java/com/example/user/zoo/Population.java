@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Population {
 
-    public ArrayList<Animal> population;
+    private ArrayList<Animal> population;
 
     public Population() {
 

@@ -28,7 +28,7 @@ public class EnclosureTest {
         elephant = new Elephant("Dumbo", 1);
         tiger = new Tiger("Shere Khan", 7);
         shark = new Shark("Jaws", 6);
-        peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
+        peanuts = new Peanuts();
         diet1 = Diet.PEANUTS;
         diet2 = Diet.MEAT;
         population = new Population();

@@ -1,11 +1,10 @@
 package com.example.user.zoo;
 
-
 /**
  * Created by user on 13/11/2016.
  */
 
-public class Food {
+abstract class Food {
 
     private String name;
     private double cost;

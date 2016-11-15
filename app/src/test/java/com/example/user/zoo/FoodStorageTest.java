@@ -12,14 +12,14 @@ import static org.junit.Assert.assertEquals;
 public class FoodStorageTest {
 
     FoodStorage foodStorage;
-    Food peanuts;
-    Food grains;
+    Peanuts peanuts;
+    Grains grains;
 
     @Before
     public void before() {
         foodStorage = new FoodStorage();
-        peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
-        grains = new Food("Grains", 0.42, Diet.GRAINS);
+        peanuts = new Peanuts();
+        grains = new Grains();
     }
 
     @Test

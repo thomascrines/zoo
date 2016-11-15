@@ -6,18 +6,16 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by user on 13/11/2016.
+ * Created by user on 15/11/2016.
  */
 
-public class FoodTest {
+public class PeanutsTest {
 
-    Food peanuts;
-    Food grains;
+    Peanuts peanuts;
 
     @Before
     public void before() {
-        peanuts = new Food("Peanuts", 0.55, Diet.PEANUTS);
-        grains = new Food("Grains", 0.42, Diet.GRAINS);
+        peanuts = new Peanuts();
     }
 
     @Test
@@ -36,5 +34,3 @@ public class FoodTest {
     }
 
 }
-
-

@@ -1,6 +1,7 @@
 package com.example.user.zoo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by user on 12/11/2016.
@@ -40,6 +41,10 @@ public class Zoo {
         return enclosures;
     }
 
+    public FoodStorage getFoodStorage() {
+        return foodStorage;
+    }
+
     public void addEnclosure(Enclosure enclosure) {
         enclosures.add(enclosure);
     }
@@ -57,19 +62,63 @@ public class Zoo {
         }
     }
 
+    public void buyFood(Food food, int quantity) {
+        foodStorage.addFood(food, quantity);
+        for (int i = 0; i < quantity; i++) {
+            funds -= food.getCost();
+        }
+    }
+
     public ArrayList<Diet> getNecessaryFoodForDay() {
         return this.zooDailyDiet;
     }
 
+    public void removeEnclosureFoodFromStore() {
+        Iterator<Food> foodIterator = foodStorage.getTotalFood().iterator();
+        ArrayList<Diet> necessaryDiet = new ArrayList<>();
+        for (Diet diet : getNecessaryFoodForDay()) {
+            necessaryDiet.add(diet);
+            for (Food food : foodStorage.getTotalFood()) {
+                while (foodIterator.hasNext()) {
+                    food = foodIterator.next();
+                    if (diet == food.getFoodType()) {
+                        foodStorage.removeFood(food);
+                    }
+                }
+            }
+        }
+    }
+
 //    public void removeNecessaryFoodFromFoodStorage() {
+//        Iterator<Diet> dietIterator = zooDailyDiet.iterator();
+//        Iterator<Food> foodIterator = foodStorage.getTotalFood().iterator();
+////
+////
 //        for (Diet dietType : zooDailyDiet) {
-//            for (Food storageFood : foodStorage.getTotalFood()) {
-//                if (storageFood.getFoodType() == dietType) {
-//                    foodStorage.removeFood(storageFood);
-//                    this.funds -= storageFood.getCost();
-//                }
+//            while (dietIterator.hasNext()) {
+//                dietIterator.next();
+//                for (Food storageFood : foodStorage.getTotalFood())
+//                    while (foodIterator.hasNext()) {
+//                        Food food = foodIterator.next();
+//                        if (dietType == storageFood.getFoodType()) {
+//                            foodStorage.getTotalFood().remove(storageFood);
+//                        }
+//                    }
 //            }
 //        }
+//    }
+//
+//    public void removeNecFood2() {
+//        ArrayList toRemove = new ArrayList();
+//
+//        for (Diet dietType : zooDailyDiet) {
+//                for (Food storageFood : foodStorage.getTotalFood())
+//                    if (dietType == storageFood.getFoodType()) {
+//                        toRemove.add(storageFood);
+//                        this.funds -= storageFood.getCost();
+//                    }
+//        }
+//        foodStorage.getTotalFood().removeAll(toRemove);
 //    }
 
     public void sellTickets (Ticket ticket, int quantity) {
