@@ -73,21 +73,22 @@ public class Zoo {
         return this.zooDailyDiet;
     }
 
-    public void removeEnclosureFoodFromStore() {
-        Iterator<Food> foodIterator = foodStorage.getTotalFood().iterator();
-        ArrayList<Diet> necessaryDiet = new ArrayList<>();
-        for (Diet diet : getNecessaryFoodForDay()) {
-            necessaryDiet.add(diet);
-            for (Food food : foodStorage.getTotalFood()) {
-                while (foodIterator.hasNext()) {
-                    food = foodIterator.next();
-                    if (diet == food.getFoodType()) {
-                        foodStorage.removeFood(food);
-                    }
-                }
-            }
-        }
-    }
+
+//    public void removeEnclosureFoodFromStore() {
+//        Iterator<Food> foodIterator = foodStorage.getTotalFood().iterator();
+//        ArrayList<Diet> necessaryDiet = new ArrayList<>();
+//        for (Food food : getNecessaryFoodForDay()) {
+//            necessaryDiet.add(food);
+//            for (Food food : foodStorage.getTotalFood()) {
+//                while (foodIterator.hasNext()) {
+//                    food = foodIterator.next();
+//                    if (diet == food.getFoodType()) {
+//                        foodStorage.removeFood(food);
+//                    }
+//                }
+//            }
+//        }
+//    }
 
 //    public void removeNecessaryFoodFromFoodStorage() {
 //        Iterator<Diet> dietIterator = zooDailyDiet.iterator();
