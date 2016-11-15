@@ -154,4 +154,5 @@ public class ZooTest {
         zoo.animalEscape(tiger, enclosure1);
         assertEquals(350000, zoo.getFunds(), 0.1);
     }
+
 }
