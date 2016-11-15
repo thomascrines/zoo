@@ -25,6 +25,15 @@ public class FoodStorage {
         }
     }
 
+    public Food findFoodByType(Diet foodtype) {
+        for (Food food: totalFood) {
+            if (food.getFoodType() == foodtype) {
+                return food;
+            }
+        }
+        return null;
+    }
+
     public void removeFood(Food food) {
         totalFood.remove(food);
     }

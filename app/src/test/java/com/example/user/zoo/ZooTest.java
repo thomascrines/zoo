@@ -99,23 +99,23 @@ public class ZooTest {
         assertEquals(499994.50, zoo.getFunds(), 0.1);
     }
 
-//    @Test
-//    public void testCanRemoveDailyFoodFromStore() {
-//        FoodStorage testFoodStore = new FoodStorage();
-//        testFoodStore.addFood(peanuts, 3);
-//        testFoodStore.addFood(meat, 3);
-//
-//        zoo.getFoodStorage().addFood(peanuts, 4);
-//        zoo.getFoodStorage().addFood(meat, 4);
-//        zoo.addEnclosure(enclosure1);
-//        zoo.addEnclosure(enclosure2);
-//        enclosure1.addAnimalToEnclosure(elephant);
-//        enclosure2.addAnimalToEnclosure(tiger);
-//        zoo.addNecessaryFoodForDay();
-//        zoo.removeEnclosureFoodFromStore();
-//
-//        assertEquals(testFoodStore.getTotalFood(), zoo.getFoodStorage().getTotalFood());
-//    }
+    @Test
+    public void testCanRemoveDailyFoodFromStore() {
+        FoodStorage testFoodStore = new FoodStorage();
+        testFoodStore.addFood(peanuts, 3);
+        testFoodStore.addFood(meat, 3);
+
+        zoo.getFoodStorage().addFood(peanuts, 4);
+        zoo.getFoodStorage().addFood(meat, 4);
+        zoo.addEnclosure(enclosure1);
+        zoo.addEnclosure(enclosure2);
+        enclosure1.addAnimalToEnclosure(elephant);
+        enclosure2.addAnimalToEnclosure(tiger);
+        zoo.addNecessaryFoodForDay();
+        zoo.removeFoodFromStore();
+
+        assertEquals(testFoodStore.getTotalFood(), zoo.getFoodStorage().getTotalFood());
+    }
 
     @Test
     public void testCanSellTickets() {

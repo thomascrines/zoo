@@ -62,6 +62,14 @@ public class Zoo {
         }
     }
 
+    public void removeFoodFromStore() {
+        for (Diet diet :zooDailyDiet) {
+            Food food = foodStorage.findFoodByType(diet);
+                    foodStorage.removeFood(food);
+
+            }
+        }
+
     public void buyFood(Food food, int quantity) {
         foodStorage.addFood(food, quantity);
         for (int i = 0; i < quantity; i++) {
