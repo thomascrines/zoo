@@ -20,17 +20,8 @@ public class Population {
     }
 
     public void addAnimal(Animal animal) {
-        this.population.add(animal);
+        population.add(animal);
         }
-
-//    public void addAnimal(Animal animal) {
-//        for (Animal residentAnimal : population) {
-//            if (animal.isCarnivorous() && population.contains(residentAnimal.isCarnivorous())) ;
-//            population.add(animal);
-//            if (!animal.isCarnivorous() && population.contains(!residentAnimal.isCarnivorous()));
-//            population.add(animal);
-//        }
-//    }
 
     public void removeAnimal(Animal animal) {
         population.remove(animal);

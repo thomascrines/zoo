@@ -37,8 +37,8 @@ public class ZooTest {
         zoo = new Zoo("Edinburgh Zoo", 4000, 500000);
         population1 = new Population();
         population2 = new Population();
-        enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1);
-        enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2);
+        enclosure1 = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population1, false);
+        enclosure2 = new Enclosure("Tiger Enclosure", Habitat.GRASSLAND, population2, true);
         elephant = new Elephant("Dumbo", 0);
         tiger = new Tiger("Tony", 6);
         foodStorage = new FoodStorage();
@@ -94,7 +94,7 @@ public class ZooTest {
 
 //    @Test
 //    public void testCanRemoveDailyFoodFromStore() {
-//        FoodStorage testFoodStore= new FoodStorage();
+//        FoodStorage testFoodStore = new FoodStorage();
 //        testFoodStore.addFood(peanuts, 3);
 //        testFoodStore.addFood(meat, 3);
 //
@@ -107,8 +107,8 @@ public class ZooTest {
 //        zoo.addNecessaryFoodForDay();
 //        zoo.removeNecessaryFoodFromFoodStorage();
 //
-////        assertEquals(testFoodStore.getTotalFood(), foodStorage.getTotalFood());
-////        assertEquals(9997.10, zoo.getFunds(), 0.1);
+//        assertEquals(testFoodStore.getTotalFood(), foodStorage.getTotalFood());
+//        assertEquals(9997.10, zoo.getFunds(), 0.1);
 //    }
 
     @Test

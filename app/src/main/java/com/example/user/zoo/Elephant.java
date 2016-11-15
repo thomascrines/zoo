@@ -7,7 +7,7 @@ package com.example.user.zoo;
 public class Elephant extends Animal {
 
     public Elephant(String name, int age) {
-        super(name, age, "Elephant", Habitat.DESERT, false, Diet.PEANUTS, 50000);
+        super(name, age, "Elephant", Habitat.GRASSLAND, false, Diet.PEANUTS, 50000);
 
     }
 }

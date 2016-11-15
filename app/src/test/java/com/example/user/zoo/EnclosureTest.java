@@ -32,10 +32,9 @@ public class EnclosureTest {
         diet1 = Diet.PEANUTS;
         diet2 = Diet.MEAT;
         population = new Population();
-        enclosure = new Enclosure("Elephant Enclosure", Habitat.DESERT, population);
+        enclosure = new Enclosure("Elephant Enclosure", Habitat.GRASSLAND, population, false);
         test_array = new ArrayList<>();
         test_array.add(diet1);
-        test_array.add(diet2);
     }
 
     @Test
@@ -45,7 +44,7 @@ public class EnclosureTest {
 
     @Test
     public void testCanGetHabitatType() {
-        assertEquals(Habitat.DESERT, enclosure.getHabitat());
+        assertEquals(Habitat.GRASSLAND, enclosure.getHabitat());
     }
 
     @Test
@@ -54,16 +53,23 @@ public class EnclosureTest {
     }
 
     @Test
-    public void testCanAddAnimalToEnclosure() {
+    public void testCantAddAnimalToWrongHabitat() {
         enclosure.addAnimalToEnclosure(elephant);
         enclosure.addAnimalToEnclosure(shark);
         assertEquals(1, enclosure.getPopulation().returnPopulation().size());
     }
 
     @Test
+    public void testCantAddAnimalToWrongDietPop() {
+        enclosure.addAnimalToEnclosure(elephant);
+        enclosure.addAnimalToEnclosure(tiger);
+        assertEquals(1, enclosure.getPopulation().returnPopulation().size());
+    }
+
+    @Test
     public void testCanGetGetNecessaryDiet() {
-        enclosure.getPopulation().addAnimal(elephant);
-        enclosure.getPopulation().addAnimal(tiger);
+        enclosure.addAnimalToEnclosure(elephant);
+        enclosure.addAnimalToEnclosure(tiger);
         enclosure.addNecessaryDiet();
         assertEquals(test_array, enclosure.getNecessaryDiet());
     }

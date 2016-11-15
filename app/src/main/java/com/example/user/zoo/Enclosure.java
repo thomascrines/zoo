@@ -13,12 +13,14 @@ public class Enclosure {
     private Habitat habitat;
     private Population population;
     private ArrayList<Diet> necessaryDiet;
+    private boolean popIsCarnivorous;
 
-    public Enclosure(String name, Habitat habitat, Population population) {
+    public Enclosure(String name, Habitat habitat, Population population, boolean popIsCarnivorous) {
         this.name = name;
         this.habitat = habitat;
         this.population = population;
         this.necessaryDiet = new ArrayList<>();
+        this.popIsCarnivorous = popIsCarnivorous;
     }
 
     public String getName() {
@@ -33,9 +35,16 @@ public class Enclosure {
         return population;
     }
 
+    public boolean checkIfAnimalIsSuitableForEnclosure(Animal animal) {
+        if (animal.isCarnivorous() == popIsCarnivorous) return true;
+        else return false;
+    }
+
     public void addAnimalToEnclosure(Animal animal) {
-        if (animal.getHabitat() == habitat) {
-            this.getPopulation().addAnimal(animal);
+        if (this.checkIfAnimalIsSuitableForEnclosure(animal)) {
+            if (animal.getHabitat() == habitat) {
+                this.getPopulation().addAnimal(animal);
+            }
         }
     }
 

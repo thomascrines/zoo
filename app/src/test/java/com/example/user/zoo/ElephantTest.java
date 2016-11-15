@@ -35,7 +35,7 @@ public class ElephantTest {
 
     @Test
     public void testCanGetHabitat(){
-        assertEquals(Habitat.DESERT, elephant.getHabitat());
+        assertEquals(Habitat.GRASSLAND, elephant.getHabitat());
     }
 
     @Test
