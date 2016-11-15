@@ -45,7 +45,7 @@ public class ParrotTest {
 
     @Test
     public void canGetDiet() {
-        assertEquals(Diet.GRAINS, parrot.getDiet());
+        assertEquals(Diet.BIRD_FEED, parrot.getDiet());
     }
 
     @Test
