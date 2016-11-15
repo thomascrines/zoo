@@ -1,5 +1,7 @@
 package com.example.user.zoo;
 
+import android.support.v7.app.AppCompatActivity;
+
 import java.util.ArrayList;
 
 /**
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 
 public class ZooDemo {
 
-    Zoo zoo;
+    public Zoo zoo;
     Enclosure enclosure1;
     Enclosure enclosure2;
     Enclosure enclosure3;
@@ -38,7 +40,7 @@ public class ZooDemo {
     Ticket family;
     Ticket group;
 
-    public ZooDemo {
+    public ZooDemo() {
         zoo = new Zoo("Edinburgh Zoo", 4000, 500000);
         population1 = new Population();
         population2 = new Population();

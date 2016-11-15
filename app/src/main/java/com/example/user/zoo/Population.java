@@ -27,4 +27,21 @@ public class Population {
         population.remove(animal);
     }
 
+    @Override
+    public String toString() {
+        String displayText =  "";
+
+        for (Animal animal : population) {
+            displayText += animal.getName();
+            displayText += " | ";
+            displayText += animal.getSpecies();
+            displayText += "\n";
+        }
+
+        return displayText;
+
+
+
+    }
+
 }
