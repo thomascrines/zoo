@@ -47,15 +47,23 @@ public class BuyFoodActivity extends AppCompatActivity {
                 int viewId = view.getId();
                 if (viewId == R.id.buy_peanuts) {
                     demoData.zoo.buyFood(peanuts, 1);
+                    mFoodStockBox.setText(demoData.zoo.viewStockAsString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
                 }
                 if (viewId == R.id.buy_meat) {
-                    demoData.zoo.buyFood(meat, 1);;
+                    demoData.zoo.buyFood(meat, 1);
+                    mFoodStockBox.setText(demoData.zoo.viewStockAsString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
                 }
                 if (viewId == R.id.buy_grains) {
-                    demoData.zoo.buyFood(grains, 1);;
+                    demoData.zoo.buyFood(grains, 1);
+                    mFoodStockBox.setText(demoData.zoo.viewStockAsString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
                 }
                 if (viewId == R.id.buy_bird_feed) {
-                    demoData.zoo.buyFood(birdFeed, 1);;
+                    demoData.zoo.buyFood(birdFeed, 1);
+                    mFoodStockBox.setText(demoData.zoo.viewStockAsString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
                 }
             }
         };

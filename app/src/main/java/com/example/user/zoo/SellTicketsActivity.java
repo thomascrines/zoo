@@ -53,21 +53,38 @@ public class SellTicketsActivity extends AppCompatActivity {
                 int viewId = view.getId();
                 if (viewId == R.id.sell_standard) {
                     demoData.zoo.sellTickets(standard, 1);
+                    mZooCapacityBox.setText(demoData.zoo.getCapacityToString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
                 }
                 if (viewId == R.id.sell_concession) {
                     demoData.zoo.sellTickets(concession, 1);
+                    mZooCapacityBox.setText(demoData.zoo.getCapacityToString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
+
                 }
                 if (viewId == R.id.sell_under_fifteen) {
                     demoData.zoo.sellTickets(threeToFifteen, 1);
+                    mZooCapacityBox.setText(demoData.zoo.getCapacityToString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
+
                 }
                 if (viewId == R.id.sell_under_three) {
                     demoData.zoo.sellTickets(underThree, 1);
+                    mZooCapacityBox.setText(demoData.zoo.getCapacityToString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
+
                 }
                 if (viewId == R.id.sell_family) {
                     demoData.zoo.sellTickets(family, 1);
+                    mZooCapacityBox.setText(demoData.zoo.getCapacityToString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
+
                 }
                 if (viewId == R.id.sell_group) {
                     demoData.zoo.sellTickets(group, 1);
+                    mZooCapacityBox.setText(demoData.zoo.getCapacityToString());
+                    mZooFundsBox.setText(demoData.zoo.getFundsToString());
+
                 }
             }
         };
