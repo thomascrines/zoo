@@ -3,6 +3,7 @@ package com.example.user.zoo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 /**
@@ -19,6 +20,7 @@ public class EnclosureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_enclosure);
 
         mEnclosureDetails = (TextView) findViewById (R.id.view_enclosure_to_string);
+        mEnclosureDetails.setMovementMethod(new ScrollingMovementMethod());
 
         ZooDemo demoData = new ZooDemo();
 
