@@ -36,6 +36,7 @@ public class FeedAnimalsActivity extends AppCompatActivity {
                 if (viewId == R.id.feed_zoo) {
                     demoData.zoo.addNecessaryFoodForDay();
                     demoData.zoo.removeFoodFromStore();
+                    demoData.zoo.clearNecessaryFoodForDay();
                     mFoodStockBox.setText(demoData.zoo.viewStockAsString());
                 }
             }

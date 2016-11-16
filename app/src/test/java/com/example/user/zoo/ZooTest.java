@@ -102,6 +102,18 @@ public class ZooTest {
     }
 
     @Test
+    public void testCanClearNecessaryFoodForDay() {
+        zoo.addEnclosure(enclosure1);
+        zoo.addEnclosure(enclosure2);
+        enclosure1.addAnimalToEnclosure(elephant);
+        enclosure2.addAnimalToEnclosure(tiger);
+        zoo.getNecessaryFoodForDay();
+        zoo.addNecessaryFoodForDay();
+        zoo.clearNecessaryFoodForDay();
+        assertEquals(0, zoo.getNecessaryFoodForDay().size());
+    }
+
+    @Test
     public void testCanBuyFood() {
         zoo.buyFood(peanuts, 10);
         assertEquals(499994.50, zoo.getFunds(), 0.1);

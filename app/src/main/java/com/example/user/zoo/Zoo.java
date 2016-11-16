@@ -76,7 +76,6 @@ public class Zoo {
         for (Diet diet : zooDailyDiet) {
             Food food = foodStorage.findFoodByType(diet);
             foodStorage.removeFood(food);
-
         }
     }
 
@@ -91,6 +90,9 @@ public class Zoo {
         return this.zooDailyDiet;
     }
 
+    public void clearNecessaryFoodForDay() {
+        zooDailyDiet.clear();
+    }
 
     public void sellTickets(Ticket ticket, int quantity) {
         for (int i = 0; i < quantity; i++) {
