@@ -32,6 +32,10 @@ public class BuyFoodActivity extends AppCompatActivity {
         mBuyBirdFeed = (Button) findViewById(R.id.buy_bird_feed);
 
         final ZooDemo demoData = new ZooDemo();
+        final Peanuts peanuts = new Peanuts();
+        final Meat meat = new Meat();
+        final Grains grains = new Grains();
+        final BirdFeed birdFeed = new BirdFeed();
 
         mFoodStockBox.setText(demoData.zoo.viewStockAsString());
         mZooFundsBox.setText(demoData.zoo.getFundsToString());
@@ -42,20 +46,23 @@ public class BuyFoodActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int viewId = view.getId();
                 if (viewId == R.id.buy_peanuts) {
-                    demoData.zoo.buyFood(new Peanuts(), 1);
+                    demoData.zoo.buyFood(peanuts, 1);
                 }
                 if (viewId == R.id.buy_meat) {
-                    demoData.zoo.buyFood(new Meat(), 1);;
+                    demoData.zoo.buyFood(meat, 1);;
                 }
                 if (viewId == R.id.buy_grains) {
-                    demoData.zoo.buyFood(new Grains(), 1);;
+                    demoData.zoo.buyFood(grains, 1);;
                 }
                 if (viewId == R.id.buy_bird_feed) {
-                    demoData.zoo.buyFood(new BirdFeed(), 1);;
+                    demoData.zoo.buyFood(birdFeed, 1);;
                 }
             }
         };
         mBuyPeanuts.setOnClickListener(onclick);
+        mBuyMeat.setOnClickListener(onclick);
+        mBuyGrains.setOnClickListener(onclick);
+        mBuyBirdFeed.setOnClickListener(onclick);
 
     }
 }

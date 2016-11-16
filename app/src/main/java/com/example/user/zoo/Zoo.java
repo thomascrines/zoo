@@ -131,12 +131,8 @@ public class Zoo {
             }
             if (food.getFoodType() == Diet.BIRD_FEED) {
                 birdFeedCounter += 1;
-
             }
         }
-
-        System.out.println("Food Storage KD: " + foodStorage.getTotalFood());
-
         return "Peanuts: " + Integer.toString(peanutsCounter) + "\n" + "Meat: " + Integer.toString(meatCounter) + "\n" + "Grains: " + Integer.toString(grainsCounter) + "\n" + "Bird Feed: " + Integer.toString(birdFeedCounter);
     }
 
