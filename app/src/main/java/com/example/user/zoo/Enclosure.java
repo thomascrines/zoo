@@ -60,9 +60,14 @@ public class Enclosure {
     }
 
     public String viewDetailsAsString() {
-        return " Enclosure name: " + name.toString() + ", Habitat type: " + habitat.toString() + ", Population: " + Integer.toString(population.returnPopulation().size());
+        return "Enclosure name: " + name.toString() + ", Habitat type: " + habitat.toString() + ", Population: " + Integer.toString(population.returnPopulation().size());
     }
 
-
+    public String viewPopulationAsString() {
+        for (Animal animal : population.returnPopulation()) {
+            return "Name: " + animal.getName() + "\nAge: " + Integer.toString(animal.getAge()) + "\nSpecies: " + animal.getSpecies().toString() + "\nValue: " + Double.toString(animal.getValue());
+        }
+        return null;
+    }
 
 }
