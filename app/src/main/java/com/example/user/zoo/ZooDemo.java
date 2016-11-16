@@ -1,9 +1,5 @@
 package com.example.user.zoo;
 
-import android.support.v7.app.AppCompatActivity;
-
-import java.util.ArrayList;
-
 /**
  * Created by user on 15/11/2016.
  */
