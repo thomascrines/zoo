@@ -36,7 +36,7 @@ public class SellTicketsActivity extends AppCompatActivity {
     public void onClick(View view) {
         int viewId = view.getId();
         if (viewId == R.id.sell_standard) {
-            de;
+         
         }
         if (viewId == R.id.sell_concession) {
             ;
