@@ -52,13 +52,15 @@ public class Enclosure {
         return this.necessaryDiet;
     }
 
-    public Diet addNecessaryDiet() {
+    public void addNecessaryDiet() {
         for (Animal animal : population.returnPopulation()) {
             necessaryDiet.add(animal.getDiet());
         }
-        return null;
     }
 
+    public void clearNecessaryDiet() {
+        necessaryDiet.clear();
+    }
     public String viewDetailsAsString() {
         return "Enclosure name: " + name.toString() + "\nHabitat type: " + habitat.toString() + "\nPopulation: " + Integer.toString(population.returnPopulation().size()) + "\n";
     }

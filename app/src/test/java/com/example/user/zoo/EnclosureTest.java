@@ -74,4 +74,13 @@ public class EnclosureTest {
         assertEquals(test_array, enclosure.getNecessaryDiet());
     }
 
+    @Test
+    public void testCanGetClearNecessaryDiet() {
+        enclosure.addAnimalToEnclosure(elephant);
+        enclosure.addAnimalToEnclosure(tiger);
+        enclosure.addNecessaryDiet();
+        enclosure.clearNecessaryDiet();
+        assertEquals(0, enclosure.getNecessaryDiet().size());
+    }
+
 }
