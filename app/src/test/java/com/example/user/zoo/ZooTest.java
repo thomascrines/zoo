@@ -178,7 +178,26 @@ public class ZooTest {
         zoo.addEnclosure(enclosure2);
         enclosure1.addAnimalToEnclosure(elephant);
         enclosure2.addAnimalToEnclosure(tiger);
-        assertEquals("Something", zoo.allEnclosuresDetails());
+        assertEquals("Enclosure name: Elephant Enclosure\n" +
+                "Habitat type: GRASSLAND\n" +
+                "Population: 1\n" +
+                "\n" +
+                "Name: Dumbo\n" +
+                "Age: 0\n" +
+                "Species: Elephant\n" +
+                "Value: 50000.0\n" +
+                " \n" +
+                "\n" +
+                "Enclosure name: Tiger Enclosure\n" +
+                "Habitat type: GRASSLAND\n" +
+                "Population: 1\n" +
+                "\n" +
+                "Name: Tony\n" +
+                "Age: 6\n" +
+                "Species: Tiger\n" +
+                "Value: 75000.0\n" +
+                " \n" +
+                "\n", zoo.allEnclosuresDetails());
     }
 
 }

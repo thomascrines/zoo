@@ -6,7 +6,6 @@ package com.example.user.zoo;
 
 public enum Diet {
     GRAINS,
-    INSECTS,
     MEAT,
     BIRD_FEED,
     PEANUTS

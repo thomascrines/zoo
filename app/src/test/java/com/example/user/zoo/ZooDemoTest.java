@@ -21,12 +21,15 @@ public class ZooDemoTest {
     }
 
     @Test
-    public void testItReturnsStuff() {
+    public void testCanReturnName() {
         assertEquals("Edinburgh Zoo", zooDemo.zoo.getName());
     }
 
     @Test
     public void testEnclosureDetails() {
-        assertEquals("Something", zooDemo.zoo.viewStockAsString());
+        assertEquals("Peanuts: 134\n" +
+                "Meat: 120\n" +
+                "Grains: 31\n" +
+                "Bird Feed: 22", zooDemo.zoo.viewStockAsString());
     }
 }
