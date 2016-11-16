@@ -8,4 +8,8 @@
     <string name="buy_food_text">Buy Food</string>
     <string name="feed_animals_text">Feed Animals</string>
     <string name="sell_tickets_text">Sell Tickets</string>
+    <string name="buy_peanuts_text">Peanuts</string>
+    <string name="buy_meat_text">Meat</string>
+    <string name="buy_grains_text">Grains</string>
+    <string name="buy_bird_feed_text">Bird Feed</string>
 </resources>

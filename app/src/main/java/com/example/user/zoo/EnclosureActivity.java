@@ -16,7 +16,7 @@ public class EnclosureActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.enclosure_activity);
+        setContentView(R.layout.activity_enclosure);
 
         mEnclosureDetails = (TextView) findViewById (R.id.view_enclosure_to_string);
 
