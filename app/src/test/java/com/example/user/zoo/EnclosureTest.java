@@ -73,4 +73,5 @@ public class EnclosureTest {
         enclosure.addNecessaryDiet();
         assertEquals(test_array, enclosure.getNecessaryDiet());
     }
+
 }

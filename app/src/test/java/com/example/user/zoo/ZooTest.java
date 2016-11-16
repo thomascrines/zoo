@@ -75,6 +75,14 @@ public class ZooTest {
     }
 
     @Test
+    public void canSetFoodStorage() {
+        FoodStorage newFoodStorage = new FoodStorage();
+        newFoodStorage.addFood(peanuts, 22);
+        zoo.setFoodStorage(newFoodStorage);
+        assertEquals(22, zoo.getFoodStorage().getTotalFood().size());
+    }
+
+    @Test
     public void testCanRemoveRemoveEnclosures() {
         zoo.addEnclosure(enclosure1);
         zoo.addEnclosure(enclosure2);
@@ -161,7 +169,16 @@ public class ZooTest {
         zoo.getFoodStorage().addFood(meat, 1);
         zoo.getFoodStorage().addFood(peanuts, 2);
 
-        assertEquals("Peanuts: 2 \nMeat: 1\nGrains: 0\nBird Feed: 0", zoo.viewStockAsString());
+        assertEquals("Peanuts: 2\nMeat: 1\nGrains: 0\nBird Feed: 0", zoo.viewStockAsString());
+    }
+
+    @Test
+    public void canReturnAllEncsAsStrings() {
+        zoo.addEnclosure(enclosure1);
+        zoo.addEnclosure(enclosure2);
+        enclosure1.addAnimalToEnclosure(elephant);
+        enclosure2.addAnimalToEnclosure(tiger);
+        assertEquals("Something", zoo.allEnclosuresDetails());
     }
 
 }

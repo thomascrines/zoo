@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class EnclosureActivity extends AppCompatActivity {
 
-
     TextView mEnclosureDetails;
 
     @Override
@@ -24,6 +23,5 @@ public class EnclosureActivity extends AppCompatActivity {
         ZooDemo demoData = new ZooDemo();
 
         mEnclosureDetails.setText(demoData.zoo.allEnclosuresDetails());
-
     }
     }

@@ -53,6 +53,8 @@ public class Zoo {
         return foodStorage;
     }
 
+    public void setFoodStorage(FoodStorage newFoodStorage) { this.foodStorage = newFoodStorage; }
+
     public void addEnclosure(Enclosure enclosure) {
         enclosures.add(enclosure);
     }
@@ -132,26 +134,18 @@ public class Zoo {
 
             }
         }
+
+        System.out.println("Food Storage KD: " + foodStorage.getTotalFood());
+
         return "Peanuts: " + Integer.toString(peanutsCounter) + "\n" + "Meat: " + Integer.toString(meatCounter) + "\n" + "Grains: " + Integer.toString(grainsCounter) + "\n" + "Bird Feed: " + Integer.toString(birdFeedCounter);
     }
 
-//    public String viewEnclosureAsString(Enclosure enclosure) {
-//        int population = enclosure.getPopulation().returnPopulation().size();
-//        return "Name: " + enclosure.getName() + "\n" + "Habitat Type: " + enclosure.getHabitat().toString() + "\n" + "Population: " + Integer.toString(population);
-//    }
-//
-//    public String viewPopulationAsString(Enclosure enclosure) {
-//        for (Animal animal : enclosure.getPopulation().returnPopulation()) {
-//            return "Name: " + animal.getName() + "\nAge: " + Integer.toString(animal.getAge()) + "\nSpecies: " + animal.getSpecies().toString() + "\nValue: " + Double.toString(animal.getValue());
-//        }
-//        return null;
-//    }
-
     public String allEnclosuresDetails() {
+        String details = "";
         for (Enclosure enclosure: enclosures) {
-            return enclosure.viewDetailsAsString() + "\n" + enclosure.viewPopulationAsString();
+            details += enclosure.viewDetailsAsString() + "\n" + enclosure.viewPopulationAsString() + "\n";
         }
-        return null;
+        return details;
     }
 
 }

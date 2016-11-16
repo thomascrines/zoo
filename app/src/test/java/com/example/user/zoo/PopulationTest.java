@@ -36,6 +36,8 @@ public class PopulationTest {
         population.removeAnimal(elephant);
         assertEquals(2, population.returnPopulation().size());
     }
+
+
     }
 
 
