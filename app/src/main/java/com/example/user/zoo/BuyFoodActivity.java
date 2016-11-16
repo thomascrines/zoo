@@ -25,6 +25,5 @@ public class BuyFoodActivity extends AppCompatActivity {
         mBuyGrains = (Button) findViewById(R.id.buy_grains);
         mBuyBirdFeed = (Button) findViewById(R.id.buy_bird_feed);
 
-
     }
 }

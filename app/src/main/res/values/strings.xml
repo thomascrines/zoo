@@ -12,4 +12,11 @@
     <string name="buy_meat_text">Meat</string>
     <string name="buy_grains_text">Grains</string>
     <string name="buy_bird_feed_text">Bird Feed</string>
+    <string name="feed_zoo_text">Feed Zoo</string>
+    <string name="sell_standard_text">Standard Ticket</string>
+    <string name="sell_concession_text">Concession Ticket</string>
+    <string name="sell_under_fifteen_text">Under 15 Ticket</string>
+    <string name="sell_under_three_text">Under 3 Ticket</string>
+    <string name="sell_family_text">Family Ticket</string>
+    <string name="sell_group_text">Group Ticket</string>
 </resources>
